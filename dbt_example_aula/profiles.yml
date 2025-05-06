@@ -1,0 +1,10 @@
+dbt_example_aula:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: dbtaula
+      dataset: "{{ env_var('DBT_DBNAME', 'dbt') }}"
+      threads: 4
+      keyfile: C:\Users\joaov\.dbt\dbtaula-fc39d6325d08.json
